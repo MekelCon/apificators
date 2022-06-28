@@ -1,4 +1,5 @@
-<div class="card">
-  <h5>Line Styles</h5>
-  <p-chart type="line" [data]="lineStylesData" [options]="basicOptions"></p-chart>
-</div>
+
+<p-tabMenu [model]="items" [activeItem]="items[0]"></p-tabMenu>
+<!-- The routed views render in the <router-outlet>-->
+<router-outlet></router-outlet>
+

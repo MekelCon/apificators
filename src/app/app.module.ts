@@ -3,16 +3,22 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import {ChartModule} from 'primeng/chart';
+import { ChartModule } from 'primeng/chart';
+import { TabMenuModule } from 'primeng/tabmenu';
+import { DashboardComponent } from './page/dashboard/dashboard.component';
+import { ReportFishingComponent } from './page/report-fishing/report-fishing.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    DashboardComponent,
+    ReportFishingComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ChartModule
+    ChartModule,
+    TabMenuModule
   ],
   providers: [],
   bootstrap: [AppComponent]

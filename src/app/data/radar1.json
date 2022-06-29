@@ -1,12 +1,14 @@
 {
     "labels": [
-        "activity",
-        "size",
-        "country"
+        "activity: Finance",
+        "size: > 1000 Customer",
+        "country: LU",
+        "dangers: Money"
     ],
     "data": [
-        3140,
-        8579,
-        7869
+        3138,
+        8586,
+        7785,
+        3906
     ]
 }

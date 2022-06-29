@@ -1,5 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 
+
+import Donnut1 from './../../data/donnut1.json';
+
+
+interface DONNUT_DATA {
+  label: string[];
+  data: number[];
+}
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
@@ -10,14 +18,16 @@ export class DashboardComponent implements OnInit {
 
   chartOptions: any;
 
+  donnut1_data: DONNUT_DATA = Donnut1;
+
   constructor() { }
 
   ngOnInit() {
     this.data = {
-      labels: ['A', 'B', 'C'],
+      labels: this.donnut1_data.label,
       datasets: [
         {
-          data: [300, 50, 100],
+          data: this.donnut1_data.data,
           backgroundColor: [
             "#FF6384",
             "#36A2EB",

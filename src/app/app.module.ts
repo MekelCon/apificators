@@ -19,6 +19,7 @@ import {PanelModule} from 'primeng/panel';
 import {FieldsetModule} from 'primeng/fieldset';
 import {RadioButtonModule} from 'primeng/radiobutton';
 import { DataViewModule } from "primeng/dataview";
+import { DashboardComponent } from './page/dashboard/dashboard.component';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import { DataViewModule } from "primeng/dataview";
     AppComponent,
     LoginComponent,
     ProfileComponent,
-    DataExplorerComponent
+    DataExplorerComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,

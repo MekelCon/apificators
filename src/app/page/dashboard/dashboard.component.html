@@ -2,8 +2,14 @@
     <div class="grid">
         <div class="col-12">
             <p-fieldset legend="My App Status" [toggleable]="true">
-                <h4>Your current app Status : <p-badge value="Threatened" size="xlarge" severity="warning"></p-badge>
-                </h4>
+                <div class="grid">
+                    <div class="col-6">
+                        <h4>Your current app Status : <p-badge value="Threatened" size="xlarge" severity="warning"></p-badge></h4>
+                    </div>
+                    <div class="col-6 text-right">
+                        <button pButton type="button" label="Alert" icon="pi pi-exclamation-triangle" iconPos="left"></button>
+                    </div>            
+                </div>
             </p-fieldset>
             <div class="mt-2">
                 <p-fieldset legend="My subscribed App" [toggleable]="true">

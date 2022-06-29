@@ -27,6 +27,6 @@ export class LoginComponent implements OnInit {
   submitLogin() {
         let login: string = this.loginDialogForm.controls['login'].value;
         this.loginService.connect(login);
-        this.router.navigate(['profile']);
+        this.router.navigate(['dashboard']);
   }
 }

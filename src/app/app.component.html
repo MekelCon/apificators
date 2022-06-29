@@ -2,7 +2,7 @@
 <div *ngIf="login!==''" class="grid" (window:resize)="onResize($event)">
 <!-- -->
     <p-image class="col-fixed" src="assets/img/logo.png" alt="Image" width="40px"></p-image> 
-    <p-tabMenu class="col" [model]="items" [activeItem]="items[0]">
+    <p-tabMenu class="col" [model]="items" [activeItem]="items[1]">
         <ng-template pTemplate="item" let-item let-i="index">
             
             <i class="{{item.icon}}"></i>

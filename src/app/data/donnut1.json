@@ -2,39 +2,41 @@
     "byDomain": {
         "label": [
             "Finance",
-            "Online Shop",
-            "Game"
+            "Travel",
+            "Telecomunication",
+            "Media",
+            "KYC",
+            "EShop"
         ],
         "data": [
-            300,
-            50,
-            100
+            3140,
+            844,
+            2990,
+            791,
+            793,
+            814
         ]
     },
     "bySize": {
         "label": [
-            "< 100 customers",
-            "100 to 1000 Customers",
+            "100 to 1000 Customer",
             "> 1000 Customer"
         ],
         "data": [
-            300,
-            150,
-            10
+            793,
+            8579
         ]
     },
     "byCountry": {
         "label": [
-            "Luxembourg",
-            "France",
-            "Germany",
-            "Belgium"
+            "LU",
+            "DE",
+            "BE"
         ],
         "data": [
-            100,
-            150,
-            200,
-            30
+            7869,
+            718,
+            785
         ]
     }
 }

@@ -1,1 +1,38 @@
-<p>dashboard works!</p>
+<div class="card mt-5">
+    <div class="grid">
+        <div class="col-12">
+            <p-fieldset legend="My App Status" [toggleable]="true">
+                <h4>Your current app Status : <p-badge value="Threatened" size="xlarge" severity="warning"></p-badge>
+                </h4>
+            </p-fieldset>
+            <div class="mt-2">
+                <p-fieldset legend="My subscribed App" [toggleable]="true">
+                    <p-dataView #dv [value]="applications" layout="list">
+                        <ng-template let-application pTemplate="listItem">
+                            <div class="col-12">
+                                <div class="product-list-item">
+                                    <img [src]="'assets/img/' + application.image" [alt]="application.image" />
+                                    <div class="product-list-detail">
+                                        <div class="product-name">{{application.name}}</div>
+                                        <div class="product-description">{{application.description}}</div>
+                                        <i class="pi pi-tag product-category-icon"></i><span
+                                            class="product-category">{{application.category}}
+                                            {{application.status}}</span>
+                                        <ng-container *ngIf="application.status==='NOTHING' else notNothing">
+                                            <i class="pi pi-circle ml-5" style="font-size: 50px;color: red;"></i>
+                                        </ng-container>
+                                        <ng-template #notNothing>
+                                            <i class="pi pi-circle ml-5" style="font-size: 50px;color: green;"></i>
+                                        </ng-template>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </ng-template>
+                    </p-dataView>
+                </p-fieldset>
+            </div>
+        </div>
+    </div>
+</div>

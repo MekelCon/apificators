@@ -2,51 +2,51 @@
 
     <div class="grid">
         <div class="col-12 lg:col-5">
-                
+
             <p-fieldset legend="Personal informations" [toggleable]="true">
                 <div class="grid">
                     <div class="col-3 lg:col-2">
-                        LastName : 
+                        LastName :
                     </div>
                     <div class="col lg:col-2">
-                        <input type="text" pInputText value="Doe"/>
+                        <input type="text" pInputText value="Doe" />
                     </div>
                 </div>
 
                 <div class="grid">
                     <div class="col-3 lg:col-2">
-                        FirstName : 
+                        FirstName :
                     </div>
                     <div class="col lg:col-2">
-                        <input type="text" pInputText value="John"/>
-                    </div>        
+                        <input type="text" pInputText value="John" />
+                    </div>
                 </div>
 
                 <div class="grid">
                     <div class="col-3 lg:col-2">
-                        Birthdate : 
+                        Birthdate :
                     </div>
                     <div class="col lg:col-2">
-                        <input type="text" pInputText value="??/??/????"/>
-                    </div>        
+                        <input type="text" pInputText value="??/??/????" />
+                    </div>
                 </div>
 
                 <div class="grid">
                     <div class="col-3 lg:col-2">
-                        Phone : 
+                        Phone :
                     </div>
                     <div class="col lg:col-2">
-                        <input type="text" pInputText value="+625 xxx xxx xxx"/>
-                    </div>        
+                        <input type="text" pInputText value="+625 xxx xxx xxx" />
+                    </div>
                 </div>
 
                 <div class="grid">
                     <div class="col-3 lg:col-2">
-                        Email : 
+                        Email :
                     </div>
                     <div class="col lg:col-2">
-                        <input type="text" pInputText value="apificators@post.lu"/>
-                    </div>        
+                        <input type="text" pInputText value="apificators@post.lu" />
+                    </div>
                 </div>
             </p-fieldset>
 
@@ -63,11 +63,13 @@
                     <label for="city1">Email</label>
                 </div>
                 <div class="field-radiobutton">
-                    <p-radioButton name="Push notification" value="Push notification" [(ngModel)]="city" inputId="city2"></p-radioButton>
+                    <p-radioButton name="Push notification" value="Push notification" [(ngModel)]="city"
+                        inputId="city2"></p-radioButton>
                     <label for="city2">Push notification</label>
                 </div>
                 <div class="field-radiobutton">
-                    <p-radioButton name="Voice call" value="Voice call" [(ngModel)]="city" inputId="city3"></p-radioButton>
+                    <p-radioButton name="Voice call" value="Voice call" [(ngModel)]="city" inputId="city3">
+                    </p-radioButton>
                     <label for="city3">Voice call</label>
                 </div>
             </p-fieldset>
@@ -75,41 +77,23 @@
 
         <div class="col-12 lg:col-12">
             <p-fieldset legend="Application subscriptions" [toggleable]="true">
-                <div class="card">
-                    <p-dataView #dv [value]="applications" layout="list">
-                        <ng-template let-application pTemplate="listItem">
-                            <div class="col-3">
-                                <div class="product-list-item">
-                                    <img [src]="'assets/img/' + application.image" [alt]="application.image"/>
-                                    <div class="product-list-detail">
-                                        <div class="product-name">{{application.name}}</div>
-                                        <div class="product-description">{{application.description}}</div>
-                                        <i class="pi pi-tag product-category-icon"></i><span class="product-category">{{application.category}}</span>
-                                    </div>
+                <p-dataView #dv [value]="applications" layout="list">
+                    <ng-template let-application pTemplate="listItem">
+                        <div class="col-3">
+                            <div class="product-list-item">
+                                <img [src]="'assets/img/' + application.image" [alt]="application.image" />
+                                <div class="product-list-detail">
+                                    <div class="product-name">{{application.name}}</div>
+                                    <div class="product-description">{{application.description}}</div>
+                                    <i class="pi pi-tag product-category-icon"></i><span
+                                        class="product-category">{{application.category}}</span>
                                 </div>
                             </div>
-                        </ng-template>
-                        <ng-template let-application pTemplate="gridItem">
-                            <div class="col-12 md:col-4">
-                                <div class="product-grid-item card">
-                                    <div class="product-grid-item-top">
-                                        <div>   
-                                            <i class="pi pi-tag product-category-icon"></i>
-                                            <span class="product-category">{{application.category}}</span>
-                                        </div>
-                                    </div>
-                                    <div class="product-grid-item-content">
-                                        <img [src]="'assets/img/' + application.image" [alt]="application.image"/>
-                                        <div class="product-name">{{application.name}}</div>
-                                        <div class="product-description">{{application.description}}</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </ng-template>
-                    </p-dataView>
-                </div>
+                        </div>
+                    </ng-template>
+                </p-dataView>
             </p-fieldset>
         </div>
 
 
-</div>
+    </div>

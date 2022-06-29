@@ -22,9 +22,13 @@ interface DONNUT_DATA {
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
+  
+  from: Date;
+  to: Date;
+
   donnut1_graph_data: any;
 
-  chartOptions: any;
+  donnut1_chartOptions: any;
 
   donnut1_data: DONNUT_DATA = Donnut1;
 
@@ -33,9 +37,13 @@ export class DashboardComponent implements OnInit {
   selectedBy: NameCode;
 
   constructor() {
+    this.to = new Date()
+    this.from = new Date(this.to.getFullYear(),this.to.getMonth()-1,0);
+    this.from.setDate(Math.min(this.to.getDate(),this.from.getDate()));
     this.donnut1_by = [
       { name: 'Domain', code: 'byDomain' },
-      { name: 'Size', code: 'bySize' }
+      { name: 'Size', code: 'bySize' },
+      { name: 'Country', code: 'byCountry' }
     ];
     this.selectedBy = this.donnut1_by[0]
    }
@@ -58,12 +66,14 @@ export class DashboardComponent implements OnInit {
           backgroundColor: [
             "#FF6384",
             "#36A2EB",
-            "#FFCE56"
+            "#FFCE56",
+            "#42C689"
           ],
           hoverBackgroundColor: [
             "#FF6384",
             "#36A2EB",
-            "#FFCE56"
+            "#FFCE56",
+            "#42C689"
           ]
         }
       ]

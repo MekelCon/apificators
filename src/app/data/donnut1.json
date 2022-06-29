@@ -22,5 +22,19 @@
             150,
             10
         ]
+    },
+    "byCountry": {
+        "label": [
+            "Luxembourg",
+            "France",
+            "Germany",
+            "Belgium"
+        ],
+        "data": [
+            100,
+            150,
+            200,
+            30
+        ]
     }
 }

@@ -2,11 +2,11 @@
     <div class="grid">
         <div class="col-2 col-offset-1 mt-5">
             <label for="from" class="mr-2">From</label>
-            <p-calendar [showIcon]="true" inputId="from"></p-calendar>
+            <p-calendar [showIcon]="true" inputId="from" [(ngModel)]="from"></p-calendar>
         </div>
         <div class="col-2 col-offset-1 mt-5">
             <label for="to" class="mr-2">To</label>
-            <p-calendar [showIcon]="true" inputId="to"></p-calendar>
+            <p-calendar [showIcon]="true" inputId="to" [(ngModel)]="to"></p-calendar>
         </div>
         <p-card class="col-10 col-offset-1">
             <ng-template pTemplate="header">
@@ -18,7 +18,7 @@
             </ng-template>
             <div class="grid">
                 <div class="col-4 col-offset-1">
-                    <p-chart type="doughnut" [data]="donnut1_graph_data" [options]="chartOptions"
+                    <p-chart type="doughnut" [data]="donnut1_graph_data" [options]="donnut1_chartOptions"
                         [style]="{'width': '10%'}"></p-chart>
                 </div>
             </div>
@@ -26,17 +26,17 @@
     </div>
     <div class="grid">
         <div class="col-2 col-offset-3">
-            <p-chart type="doughnut" [data]="donnut1_graph_data" [options]="chartOptions" [style]="{'width': '10%'}">
+            <p-chart type="doughnut" [data]="donnut1_graph_data" [options]="donnut1_chartOptions" [style]="{'width': '10%'}">
             </p-chart>
         </div>
         <div class="col-2 col-offset-2">
-            <p-chart type="doughnut" [data]="donnut1_graph_data" [options]="chartOptions" [style]="{'width': '10%'}">
+            <p-chart type="doughnut" [data]="donnut1_graph_data" [options]="donnut1_chartOptions" [style]="{'width': '10%'}">
             </p-chart>
         </div>
     </div>
     <div class="grid">
         <div class="col-2 col-offset-5">
-            <p-chart type="doughnut" [data]="donnut1_graph_data" [options]="chartOptions" [style]="{'width': '10%'}">
+            <p-chart type="doughnut" [data]="donnut1_graph_data" [options]="donnut1_chartOptions" [style]="{'width': '10%'}">
             </p-chart>
         </div>
     </div>

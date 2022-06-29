@@ -1,42 +1,54 @@
 {
     "byDomain": {
         "label": [
+            "Finance",
             "Media",
             "KYC",
-            "Telecomunication",
             "Travel",
-            "EShop",
-            "Finance"
+            "Telecomunication",
+            "EShop"
         ],
         "data": [
+            3138,
             744,
             786,
-            3189,
             768,
-            747,
-            3138
+            3189,
+            747
         ]
     },
     "bySize": {
         "label": [
-            "100 to 1000 Customer",
-            "> 1000 Customer"
+            "> 1000 Customer",
+            "100 to 1000 Customer"
         ],
         "data": [
-            786,
-            8586
+            8586,
+            786
         ]
     },
     "byCountry": {
         "label": [
-            "LU",
             "BE",
+            "LU",
             "DE"
         ],
         "data": [
-            7785,
             785,
+            7785,
             802
+        ]
+    },
+    "byDanger": {
+        "label": [
+            "Social",
+            "Personal",
+            "Money"
+        ],
+        "data": [
+            1491,
+            4743,
+            3906
         ]
     }
 }

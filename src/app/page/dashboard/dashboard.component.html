@@ -10,6 +10,7 @@
                     <p-dataView #dv [value]="applications" layout="list">
                         <ng-template let-application pTemplate="listItem">
                             <div class="col-12">
+                                
                                 <div class="product-list-item">
                                     <div class="col-12 grid">
                                         <div class="col-3">
@@ -21,7 +22,7 @@
                                             <i class="pi pi-tag product-category-icon"></i><span
                                                 class="product-category">{{application.category}}</span>
                                         </div>
-                                        <div class="col-1">
+                                        <div class="col-1" style="text-align:center">
                                             Today<br>
                                             <ng-container *ngIf="application.statusToday==='NOTHING' else notNothing">
                                                 <p-badge value="OK" size="xlarge" severity="success"></p-badge>
@@ -30,7 +31,7 @@
                                                 <p-badge value="X" size="xlarge" severity="danger"></p-badge>
                                             </ng-template>
                                         </div>
-                                        <div class="col-1">
+                                        <div class="col-1" style="text-align:center">
                                             J-5<br>
                                             <ng-container *ngIf="application.statusJ7==='NOTHING' else notNothing">
                                                 <p-badge value="OK" size="xlarge" severity="success"></p-badge>
@@ -39,7 +40,7 @@
                                                 <p-badge value="X" size="xlarge" severity="danger"></p-badge>
                                             </ng-template>
                                         </div>
-                                        <div class="col-1">
+                                        <div class="col-1" style="text-align:center">
                                             J-10<br>
                                             <ng-container *ngIf="application.statusJ15==='NOTHING' else notNothing">
                                                 <p-badge value="OK" size="xlarge" severity="success"></p-badge>

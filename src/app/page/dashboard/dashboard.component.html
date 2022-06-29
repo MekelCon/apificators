@@ -1,4 +1,23 @@
 <div class="card">
-    <h5>Line Styles</h5>
-    <p-chart type="line" [data]="lineStylesData" [options]="basicOptions"></p-chart>
-  </div>
+    <div class="grid">
+        <div class="col-2 col-offset-5">
+            <p-chart type="doughnut" [data]="data" [options]="chartOptions" [style]="{'width': '10%'}"></p-chart>
+        </div>
+    </div>
+    <div class="grid">
+        <div class="col-2 col-offset-3">
+            <p-chart type="doughnut" [data]="data" [options]="chartOptions" [style]="{'width': '10%'}">
+            </p-chart>
+        </div>
+        <div class="col-2 col-offset-2">
+            <p-chart type="doughnut" [data]="data" [options]="chartOptions" [style]="{'width': '10%'}">
+            </p-chart>
+        </div>
+    </div>
+    <div class="grid">
+        <div class="col-2 col-offset-5">
+            <p-chart type="doughnut" [data]="data" [options]="chartOptions" [style]="{'width': '10%'}">
+            </p-chart>
+        </div>
+    </div>
+</div>

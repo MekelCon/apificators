@@ -1,7 +1,7 @@
 
-<div *ngIf="isConnected()" class="grid" (window:resize)="onResize($event)">
+<div *ngIf="connected" class="grid" (window:resize)="onResize($event)">
 
-<p-image class="col-fixed" style="width:50px" src="assets/img/logo.png" alt="Image" width="50px"></p-image>
+
 <p-tabMenu class="col" [model]="items" [activeItem]="items[0]">
     <ng-template pTemplate="item" let-item let-i="index">
         

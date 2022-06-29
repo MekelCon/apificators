@@ -8,13 +8,6 @@ export class LoginService {
     connected$: Observable<boolean> = this.connected.asObservable();
 
     connect():void{
-        //console.log("connected : " + this.connected)
-        //this.connected=true;
-        //console.log("connected : " + this.connected)
+        this.connected.next(true);
     }
-
-    isConnected(): boolean {
-        return true;
-    }
-
 }

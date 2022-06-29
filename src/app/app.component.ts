@@ -23,22 +23,15 @@ export class AppComponent implements OnInit {
             { label: 'Data Explorer', icon: 'pi pi-fw pi-search', routerLink: "data-explorer" },
             { label: 'SPAMBEE', icon: 'pi pi-fw pi-external-link', routerLink: "spam-bee" }
         ];
+        this.loginService.connected$.subscribe(isCOnnected => this.connected = true)
     }
 
     onResize(event: any) {
-        console.log("event : " + event)
-        console.log("window.screen.width : " + window.screen.width)
         if (window.screen.width < 700) { // Just for the demo when going through desktop to mobile size
             this.desktop = false;
         }else{
             this.desktop = true;
         }
-    }
-
-
-
-    isConnected(){
-        this.loginService.isConnected();
     }
 
 }

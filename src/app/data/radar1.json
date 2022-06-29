@@ -1,6 +1,12 @@
 {
     "labels": [
-        "activity", "size", "country"
+        "activity",
+        "size",
+        "country"
     ],
-    "data": [10, 12, 15]
+    "data": [
+        3140,
+        8579,
+        7869
+    ]
 }

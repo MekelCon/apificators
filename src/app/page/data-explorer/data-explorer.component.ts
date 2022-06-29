@@ -67,7 +67,8 @@ export class DataExplorerComponent implements OnInit {
     this.donnut1_by = [
       { name: 'Domain', code: 'byDomain' },
       { name: 'Size', code: 'bySize' },
-      { name: 'Country', code: 'byCountry' }
+      { name: 'Country', code: 'byCountry' },
+      { name: 'Danger', code: 'byDanger' }
     ];
     this.selectedBy = this.donnut1_by[0]
     this.donnut1_chart_options = {
@@ -138,26 +139,7 @@ export class DataExplorerComponent implements OnInit {
 
   ngOnInit() {
     this.refreshDonnut()
-  }
-
-  onChangeBy(event: any) {
-    this.refreshDonnut()
-  }
-
-  private refreshDonnut() {
-    this.donnut1_graph_data = {
-      labels: this.donnut1_data[this.selectedBy.code as keyof DONNUT_DATA].label,
-      datasets: [
-        {
-          data: this.donnut1_data[this.selectedBy.code as keyof DONNUT_DATA].data,
-          backgroundColor: this.COLORS,
-          hoverBackgroundColor: [
-            this.COLORS
-          ]
-        }
-      ]
-    };
-
+    
     this.line1_graph_data = {
       labels: this.line1_data.labels,
       datasets: this.line1_data.datasets.map((dataset, index) => {
@@ -182,6 +164,25 @@ export class DataExplorerComponent implements OnInit {
           pointHoverBackgroundColor: '#fff',
           pointHoverBorderColor: 'rgba(179,181,198,1)',
           data: this.radar1_data.data
+        }
+      ]
+    };
+  }
+
+  onChangeBy(event: any) {
+    this.refreshDonnut()
+  }
+
+  private refreshDonnut() {
+    this.donnut1_graph_data = {
+      labels: this.donnut1_data[this.selectedBy.code as keyof DONNUT_DATA].label,
+      datasets: [
+        {
+          data: this.donnut1_data[this.selectedBy.code as keyof DONNUT_DATA].data,
+          backgroundColor: this.COLORS,
+          hoverBackgroundColor: [
+            this.COLORS
+          ]
         }
       ]
     };

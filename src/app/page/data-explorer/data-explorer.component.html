@@ -1,41 +1,38 @@
-<div class="card mt-5">
+<p-card>
     <div class="grid">
-        <div class="col-2 col-offset-1 mt-5">
+        <div class="col-2 col-offset-1 mt-2">
             <label for="from" class="mr-2">From</label>
             <p-calendar [showIcon]="true" inputId="from" [(ngModel)]="from" dateFormat="dd/mm/yy"></p-calendar>
         </div>
-        <div class="col-2 col-offset-1 mt-5">
+        <div class="col-2 col-offset-1 mt-2">
             <label for="to" class="mr-2">To</label>
             <p-calendar [showIcon]="true" inputId="to" [(ngModel)]="to" dateFormat="dd/mm/yy"></p-calendar>
         </div>
-        <p-card class="col-10 col-offset-1">
-            <ng-template pTemplate="header">
-                <div class="ml-2 mt-2">
-                    Count by <p-dropdown [options]="donnut1_by" [(ngModel)]="selectedBy" optionLabel="name" inputId="by"
-                        (onChange)="onChangeBy($event)">
-                    </p-dropdown>
-                </div>
-            </ng-template>
+        <div class="col-6"></div>
+
+        <p-fieldset class="col-5 col-offset-1" legend="Search by a criteria" [toggleable]="true">
             <div class="grid">
-                <div class="col-4 col-offset-1">
+                <p-dropdown class="col-1" [options]="donnut1_by" [(ngModel)]="selectedBy" optionLabel="name"
+                    inputId="by" (onChange)="onChangeBy($event)">
+                </p-dropdown>
+                <div class="col-10 col-offset-1">
                     <p-chart type="doughnut" [data]="donnut1_graph_data" [options]="donnut1_chart_options"
                         [style]="{'width': '10%'}"></p-chart>
                 </div>
             </div>
-        </p-card>
+        </p-fieldset>
+        <p-fieldset class="col-5" legend="My Threat level by criteria" [toggleable]="true">
+            <div class="grid">
+                <div class="col-10" header="My threat level">
+                    <p-chart type="radar" [data]="radar1_graph_data" [options]="radar1_chart_options"
+                        [style]="{'width': '10%'}"></p-chart>
+                </div>
+            </div>
+        </p-fieldset>
     </div>
     <div class="grid">
-        <p-card class="col-10 col-offset-1" header="Count by App">
+        <p-fieldset class="col-10 col-offset-1" legend="Count by App" [toggleable]="true">
             <p-chart type="line" [data]="line1_graph_data" [options]="line1_chart_options"></p-chart>
-        </p-card>
+        </p-fieldset>
     </div>
-
-    <div class="grid">
-        <div class="col-4 col-offset-1">
-            <p-card class="col-10 col-offset-1" header="My threat level">
-                <p-chart type="radar" [data]="radar1_graph_data" [options]="radar1_chart_options"
-                    [style]="{'width': '10%'}"></p-chart>
-            </p-card>
-        </div>
-    </div>
-</div>
+</p-card>

@@ -6,6 +6,12 @@
         "country": "LU"
     },
     {
+        "name": "IHUB",
+        "activity": "KYC",
+        "size": "100 to 1000 Customer",
+        "country": "LU"
+    },
+    {
         "name": "BilNet",
         "activity": "Finance",
         "size": "> 1000 Customer",
@@ -28,6 +34,18 @@
         "activity": "Telecomunication",
         "size": "> 1000 Customer",
         "country": "LU"
+    },
+    {
+        "name": "Proximus",
+        "activity": "Telecomunication",
+        "size": "> 1000 Customer",
+        "country": "BE"
+    },
+    {
+        "name": "TOnline",
+        "activity": "Telecomunication",
+        "size": "> 1000 Customer",
+        "country": "DE"
     },
     {
         "name": "Tango.lu",

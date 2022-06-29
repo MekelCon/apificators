@@ -4,6 +4,7 @@ import { Component, OnInit } from '@angular/core';
 
 import Donnut1 from './../../data/donnut1.json';
 import Line1 from './../../data/line1.json';
+import Radar1 from './../../data/radar1.json';
 
 interface NameCode {
   name: string,
@@ -25,6 +26,10 @@ interface LINE_DATA {
   labels: string[],
   datasets: DATASET[]
 }
+interface RADAR_DATA {
+  labels: string[],
+  data: number[]
+}
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
@@ -44,6 +49,9 @@ export class DashboardComponent implements OnInit {
   line1_chart_options: any;
   line1_data: LINE_DATA = Line1;
 
+  radar1_graph_data: any;
+  radar1_chart_options: any;
+  radar1_data: RADAR_DATA = Radar1;
 
   selectedBy: NameCode;
 
@@ -93,6 +101,34 @@ export class DashboardComponent implements OnInit {
         }
       }
     };
+    this.radar1_chart_options = {
+      scale: {
+        ticks: {
+          beginAtZero: true
+        }
+      },
+      plugins: {
+        legend: {
+          labels: {
+            color: '#ebedef'
+          }
+        }
+      },
+      scales: {
+        r: {
+          pointLabels: {
+            color: '#ebedef',
+          },
+          grid: {
+            color: 'rgba(255,255,255,0.2)',
+          },
+          angleLines: {
+            color: 'rgba(255,255,255,0.2)'
+          },
+          suggestedMin: 0
+        }
+      }
+    };
   }
 
   ngOnInit() {
@@ -130,7 +166,7 @@ export class DashboardComponent implements OnInit {
     };
     this.line1_graph_data = {
       labels: this.line1_data.labels,
-       datasets: [
+      datasets: [
         {
           label: this.line1_data.datasets[0].label,
           data: this.line1_data.datasets[0].data,
@@ -144,6 +180,21 @@ export class DashboardComponent implements OnInit {
           fill: false,
           borderColor: '#FFA726',
           tension: .4
+        }
+      ]
+    };
+    this.radar1_graph_data = {
+      labels: this.radar1_data.labels,
+      datasets: [
+        {
+          label: 'Count by my critria',
+          backgroundColor: 'rgba(179,181,198,0.2)',
+          borderColor: 'rgba(179,181,198,1)',
+          pointBackgroundColor: 'rgba(179,181,198,1)',
+          pointBorderColor: '#fff',
+          pointHoverBackgroundColor: '#fff',
+          pointHoverBorderColor: 'rgba(179,181,198,1)',
+          data: this.radar1_data.data
         }
       ]
     };

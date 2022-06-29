@@ -25,8 +25,17 @@
         </p-card>
     </div>
     <div class="grid">
-        <p-card class="col-10 col-offset-1" header="Count by Company i follow">
+        <p-card class="col-10 col-offset-1" header="Count by App">
             <p-chart type="line" [data]="line1_graph_data" [options]="line1_chart_options"></p-chart>
         </p-card>
+    </div>
+
+    <div class="grid">
+        <div class="col-4 col-offset-1">
+            <p-card class="col-10 col-offset-1" header="My threat level">
+                <p-chart type="radar" [data]="radar1_graph_data" [options]="radar1_chart_options"
+                    [style]="{'width': '10%'}"></p-chart>
+            </p-card>
+        </div>
     </div>
 </div>

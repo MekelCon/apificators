@@ -82,5 +82,5 @@
         "size": "> 1000 Customer",
         "country": "LU",
         "dangers" : ["Personal", "Money"]
-    }   
+    }
 ]

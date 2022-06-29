@@ -1,20 +1,20 @@
 {
     "byDomain": {
         "label": [
-            "Finance",
-            "Travel",
-            "Telecomunication",
             "Media",
             "KYC",
-            "EShop"
+            "Telecomunication",
+            "Travel",
+            "EShop",
+            "Finance"
         ],
         "data": [
-            3140,
-            844,
-            2990,
-            791,
-            793,
-            814
+            744,
+            786,
+            3189,
+            768,
+            747,
+            3138
         ]
     },
     "bySize": {
@@ -23,20 +23,20 @@
             "> 1000 Customer"
         ],
         "data": [
-            793,
-            8579
+            786,
+            8586
         ]
     },
     "byCountry": {
         "label": [
             "LU",
-            "DE",
-            "BE"
+            "BE",
+            "DE"
         ],
         "data": [
-            7869,
-            718,
-            785
+            7785,
+            785,
+            802
         ]
     }
 }

@@ -1,0 +1,56 @@
+[
+    {
+        "name": "EBOO",
+        "activity": "Finance",
+        "size": "> 1000 Customer",
+        "country": "LU"
+    },
+    {
+        "name": "BilNet",
+        "activity": "Finance",
+        "size": "> 1000 Customer",
+        "country": "LU"
+    },
+    {
+        "name": "SNet",
+        "activity": "Finance",
+        "size": "> 1000 Customer",
+        "country": "LU"
+    },
+    {
+        "name": "RNet",
+        "activity": "Finance",
+        "size": "> 1000 Customer",
+        "country": "LU"
+    },
+    {
+        "name": "MyPost",
+        "activity": "Telecomunication",
+        "size": "> 1000 Customer",
+        "country": "LU"
+    },
+    {
+        "name": "Tango.lu",
+        "activity": "Telecomunication",
+        "size": "> 1000 Customer",
+        "country": "LU"
+    },
+    {
+        "name": "Cactus",
+        "activity": "EShop",
+        "size": "> 1000 Customer",
+        "country": "LU"
+    },
+    {
+        "name": "RTL.lu",
+        "activity": "Media",
+        "size": "> 1000 Customer",
+        "country": "LU"
+    },
+    {
+        "name": "Luxair.lu",
+        "activity": "Travel",
+        "size": "> 1000 Customer",
+        "country": "LU"
+    }   
+]

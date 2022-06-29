@@ -3,72 +3,84 @@
         "name": "EBOO",
         "activity": "Finance",
         "size": "> 1000 Customer",
-        "country": "LU"
+        "country": "LU",
+        "dangers" : ["Money"]
     },
     {
         "name": "IHUB",
         "activity": "KYC",
         "size": "100 to 1000 Customer",
-        "country": "LU"
+        "country": "LU",
+        "dangers" : ["Personal"]
     },
     {
         "name": "BilNet",
         "activity": "Finance",
         "size": "> 1000 Customer",
-        "country": "LU"
+        "country": "LU",
+        "dangers" : ["Money"]
     },
     {
         "name": "SNet",
         "activity": "Finance",
         "size": "> 1000 Customer",
-        "country": "LU"
+        "country": "LU",
+        "dangers" : ["Money"]
     },
     {
         "name": "RNet",
         "activity": "Finance",
         "size": "> 1000 Customer",
-        "country": "LU"
+        "country": "LU",
+        "dangers" : ["Money"]
     },
     {
         "name": "MyPost",
         "activity": "Telecomunication",
         "size": "> 1000 Customer",
-        "country": "LU"
+        "country": "LU",
+        "dangers" : ["Personal"]
     },
     {
         "name": "Proximus",
         "activity": "Telecomunication",
         "size": "> 1000 Customer",
-        "country": "BE"
+        "country": "BE",
+        "dangers" : ["Personal"]
     },
     {
         "name": "TOnline",
         "activity": "Telecomunication",
         "size": "> 1000 Customer",
-        "country": "DE"
+        "country": "DE",
+        "dangers" : ["Personal"]
     },
     {
         "name": "Tango.lu",
         "activity": "Telecomunication",
         "size": "> 1000 Customer",
-        "country": "LU"
+        "country": "LU",
+        "dangers" : ["Personal"]
     },
     {
         "name": "Cactus",
         "activity": "EShop",
         "size": "> 1000 Customer",
-        "country": "LU"
+        "country": "LU",
+        "dangers" : ["Social"]
     },
     {
         "name": "RTL.lu",
         "activity": "Media",
         "size": "> 1000 Customer",
-        "country": "LU"
+        "country": "LU",
+        "dangers" : ["Social"]
     },
     {
         "name": "Luxair.lu",
         "activity": "Travel",
         "size": "> 1000 Customer",
-        "country": "LU"
+        "country": "LU",
+        "dangers" : ["Personal", "Money"]
     }   
 ]

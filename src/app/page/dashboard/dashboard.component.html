@@ -11,18 +11,43 @@
                         <ng-template let-application pTemplate="listItem">
                             <div class="col-12">
                                 <div class="product-list-item">
-                                    <img [src]="'assets/img/' + application.image" [alt]="application.image" />
-                                    <div class="product-list-detail">
-                                        <div class="product-name">{{application.name}}</div>
-                                        <div class="product-description">{{application.description}}</div>
-                                        <i class="pi pi-tag product-category-icon"></i><span
-                                            class="product-category">{{application.category}}</span>
-                                        <ng-container *ngIf="application.status==='NOTHING' else notNothing">
-                                            <i class="pi pi-circle ml-5" style="font-size: 50px;color: green;"></i>
-                                        </ng-container>
-                                        <ng-template #notNothing>
-                                            <i class="pi pi-circle ml-5" style="font-size: 50px;color: red;"></i>
-                                        </ng-template>
+                                    <div class="col-12 grid">
+                                        <div class="col-3">
+                                            <img [src]="'assets/img/' + application.image" [alt]="application.image" />
+                                        </div>
+                                        <div class="product-list-detail col-1">
+                                            <div class="product-name">{{application.name}}</div>
+                                            <div class="product-description">{{application.description}}</div>
+                                            <i class="pi pi-tag product-category-icon"></i><span
+                                                class="product-category">{{application.category}}</span>
+                                        </div>
+                                        <div class="col-1">
+                                            Today<br>
+                                            <ng-container *ngIf="application.statusToday==='NOTHING' else notNothing">
+                                                <p-badge value="OK" size="xlarge" severity="success"></p-badge>
+                                            </ng-container>
+                                            <ng-template #notNothing>
+                                                <p-badge value="X" size="xlarge" severity="danger"></p-badge>
+                                            </ng-template>
+                                        </div>
+                                        <div class="col-1">
+                                            J-5<br>
+                                            <ng-container *ngIf="application.statusJ7==='NOTHING' else notNothing">
+                                                <p-badge value="OK" size="xlarge" severity="success"></p-badge>
+                                            </ng-container>
+                                            <ng-template #notNothing>
+                                                <p-badge value="X" size="xlarge" severity="danger"></p-badge>
+                                            </ng-template>
+                                        </div>
+                                        <div class="col-1">
+                                            J-10<br>
+                                            <ng-container *ngIf="application.statusJ15==='NOTHING' else notNothing">
+                                                <p-badge value="OK" size="xlarge" severity="success"></p-badge>
+                                            </ng-container>
+                                            <ng-template #notNothing>
+                                                <p-badge value="X" size="xlarge" severity="danger"></p-badge>
+                                            </ng-template>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

@@ -113,13 +113,17 @@ export class DashboardComponent implements OnInit {
             "#FF6384",
             "#36A2EB",
             "#FFCE56",
-            "#42C689"
+            "#42C689",
+            "#C642C6",
+            "#52E9EA"
           ],
           hoverBackgroundColor: [
             "#FF6384",
             "#36A2EB",
             "#FFCE56",
-            "#42C689"
+            "#42C689",
+            "#C642C6",
+            "#52E9EA"
           ]
         }
       ]

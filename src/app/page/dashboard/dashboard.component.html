@@ -2,11 +2,11 @@
     <div class="grid">
         <div class="col-2 col-offset-1 mt-5">
             <label for="from" class="mr-2">From</label>
-            <p-calendar [showIcon]="true" inputId="from" [(ngModel)]="from"></p-calendar>
+            <p-calendar [showIcon]="true" inputId="from" [(ngModel)]="from" dateFormat="dd/mm/yy"></p-calendar>
         </div>
         <div class="col-2 col-offset-1 mt-5">
             <label for="to" class="mr-2">To</label>
-            <p-calendar [showIcon]="true" inputId="to" [(ngModel)]="to"></p-calendar>
+            <p-calendar [showIcon]="true" inputId="to" [(ngModel)]="to" dateFormat="dd/mm/yy"></p-calendar>
         </div>
         <p-card class="col-10 col-offset-1">
             <ng-template pTemplate="header">

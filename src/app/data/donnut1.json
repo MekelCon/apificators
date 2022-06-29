@@ -1,5 +1,26 @@
 {
-    "label" : ["A", "B", "C"],
-    "data":[300, 50, 100]
+    "byDomain": {
+        "label": [
+            "Finance",
+            "Online Shop",
+            "Game"
+        ],
+        "data": [
+            300,
+            50,
+            100
+        ]
+    },
+    "bySize": {
+        "label": [
+            "< 100 customers",
+            "100 to 1000 Customers",
+            "> 1000 Customer"
+        ],
+        "data": [
+            300,
+            150,
+            10
+        ]
+    }
 }
-

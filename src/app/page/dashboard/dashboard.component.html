@@ -11,33 +11,22 @@
         <p-card class="col-10 col-offset-1">
             <ng-template pTemplate="header">
                 <div class="ml-2 mt-2">
-                    Count by <p-dropdown [options]="donnut1_by" [(ngModel)]="selectedBy" optionLabel="name"
-                        inputId="by" (onChange)="onChangeBy($event)">
+                    Count by <p-dropdown [options]="donnut1_by" [(ngModel)]="selectedBy" optionLabel="name" inputId="by"
+                        (onChange)="onChangeBy($event)">
                     </p-dropdown>
                 </div>
             </ng-template>
             <div class="grid">
                 <div class="col-4 col-offset-1">
-                    <p-chart type="doughnut" [data]="donnut1_graph_data" [options]="donnut1_chartOptions"
+                    <p-chart type="doughnut" [data]="donnut1_graph_data" [options]="donnut1_chart_options"
                         [style]="{'width': '10%'}"></p-chart>
                 </div>
             </div>
         </p-card>
     </div>
     <div class="grid">
-        <div class="col-2 col-offset-3">
-            <p-chart type="doughnut" [data]="donnut1_graph_data" [options]="donnut1_chartOptions" [style]="{'width': '10%'}">
-            </p-chart>
-        </div>
-        <div class="col-2 col-offset-2">
-            <p-chart type="doughnut" [data]="donnut1_graph_data" [options]="donnut1_chartOptions" [style]="{'width': '10%'}">
-            </p-chart>
-        </div>
-    </div>
-    <div class="grid">
-        <div class="col-2 col-offset-5">
-            <p-chart type="doughnut" [data]="donnut1_graph_data" [options]="donnut1_chartOptions" [style]="{'width': '10%'}">
-            </p-chart>
-        </div>
+        <p-card class="col-10 col-offset-1" header="Count by Company i follow">
+            <p-chart type="line" [data]="line1_graph_data" [options]="line1_chart_options"></p-chart>
+        </p-card>
     </div>
 </div>

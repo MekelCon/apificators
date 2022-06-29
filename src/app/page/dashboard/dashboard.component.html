@@ -2,14 +2,8 @@
     <div class="grid">
         <div class="col-12">
             <p-fieldset legend="My App Status" [toggleable]="true">
-                <div class="grid">
-                    <div class="col-6">
-                        <h4>Your current app Status : <p-badge value="Threatened" size="xlarge" severity="warning"></p-badge></h4>
-                    </div>
-                    <div class="col-6 text-right">
-                        <button pButton type="button" label="Alert" icon="pi pi-exclamation-triangle" iconPos="left"></button>
-                    </div>            
-                </div>
+                <h4>Your current app Status : <p-badge value="Threatened" size="xlarge" severity="warning"></p-badge>
+                </h4>
             </p-fieldset>
             <div class="mt-2">
                 <p-fieldset legend="My subscribed App" [toggleable]="true">
@@ -22,18 +16,15 @@
                                         <div class="product-name">{{application.name}}</div>
                                         <div class="product-description">{{application.description}}</div>
                                         <i class="pi pi-tag product-category-icon"></i><span
-                                            class="product-category">{{application.category}}
-                                            {{application.status}}</span>
+                                            class="product-category">{{application.category}}</span>
                                         <ng-container *ngIf="application.status==='NOTHING' else notNothing">
-                                            <i class="pi pi-circle ml-5" style="font-size: 50px;color: red;"></i>
+                                            <i class="pi pi-circle ml-5" style="font-size: 50px;color: green;"></i>
                                         </ng-container>
                                         <ng-template #notNothing>
-                                            <i class="pi pi-circle ml-5" style="font-size: 50px;color: green;"></i>
+                                            <i class="pi pi-circle ml-5" style="font-size: 50px;color: red;"></i>
                                         </ng-template>
-
                                     </div>
                                 </div>
-
                             </div>
                         </ng-template>
                     </p-dataView>

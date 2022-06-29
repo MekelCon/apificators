@@ -1,6 +1,4 @@
-import { ThisReceiver } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
-
 
 import Donnut1 from './../../data/donnut1.json';
 import Line1 from './../../data/line1.json';
@@ -36,7 +34,14 @@ interface RADAR_DATA {
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
-
+  COLORS = [
+    "#FF6384",
+    "#36A2EB",
+    "#FFCE56",
+    "#42C689",
+    "#C642C6",
+    "#52E9EA"
+  ];
   from: Date;
   to: Date;
 
@@ -145,43 +150,25 @@ export class DashboardComponent implements OnInit {
       datasets: [
         {
           data: this.donnut1_data[this.selectedBy.code as keyof DONNUT_DATA].data,
-          backgroundColor: [
-            "#FF6384",
-            "#36A2EB",
-            "#FFCE56",
-            "#42C689",
-            "#C642C6",
-            "#52E9EA"
-          ],
+          backgroundColor: this.COLORS,
           hoverBackgroundColor: [
-            "#FF6384",
-            "#36A2EB",
-            "#FFCE56",
-            "#42C689",
-            "#C642C6",
-            "#52E9EA"
+            this.COLORS
           ]
         }
       ]
     };
+
     this.line1_graph_data = {
       labels: this.line1_data.labels,
-      datasets: [
-        {
-          label: this.line1_data.datasets[0].label,
-          data: this.line1_data.datasets[0].data,
+      datasets: this.line1_data.datasets.map((dataset, index) => {
+        return {
+          label: dataset.label,
+          data: dataset.data,
           fill: false,
-          borderColor: '#42A5F5',
+          borderColor: this.COLORS[index % this.COLORS.length],
           tension: .4
-        },
-        {
-          label: this.line1_data.datasets[1].label,
-          data: this.line1_data.datasets[1].data,
-          fill: false,
-          borderColor: '#FFA726',
-          tension: .4
-        }
-      ]
+        };
+      })
     };
     this.radar1_graph_data = {
       labels: this.radar1_data.labels,

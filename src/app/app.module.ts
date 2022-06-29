@@ -12,8 +12,7 @@ import { DropdownModule } from 'primeng/dropdown';
 import { TabMenuModule } from 'primeng/tabmenu';
 import { LoginComponent } from './page/login/login.component';
 import { ProfileComponent } from './page/profile/profile.component';
-import { DashboardComponent } from './page/dashboard/dashboard.component';
-import { ReportFishingComponent } from './page/report-fishing/report-fishing.component';
+import { DataExplorerComponent } from './page/data-explorer/data-explorer.component';
 import {ImageModule} from 'primeng/image';
 import {ButtonModule} from 'primeng/button';
 import {PanelModule} from 'primeng/panel';
@@ -27,8 +26,7 @@ import { DataViewModule } from "primeng/dataview";
     AppComponent,
     LoginComponent,
     ProfileComponent,
-    DashboardComponent,
-    ReportFishingComponent
+    DataExplorerComponent
   ],
   imports: [
     BrowserModule,

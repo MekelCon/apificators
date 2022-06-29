@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
-import Donnut1 from './../../data/donnut1.json';
-import Line1 from './../../data/line1.json';
-import Radar1 from './../../data/radar1.json';
+import Donnut1 from '../../data/donnut1.json';
+import Line1 from '../../data/line1.json';
+import Radar1 from '../../data/radar1.json';
 
 interface NameCode {
   name: string,
@@ -29,11 +29,11 @@ interface RADAR_DATA {
   data: number[]
 }
 @Component({
-  selector: 'app-dashboard',
-  templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.css']
+  selector: 'app-data-explorer',
+  templateUrl: './data-explorer.component.html',
+  styleUrls: ['./data-explorer.component.css']
 })
-export class DashboardComponent implements OnInit {
+export class DataExplorerComponent implements OnInit {
   COLORS = [
     "#FF6384",
     "#36A2EB",

@@ -7,7 +7,7 @@
                         <h4>Your current app Status : <p-badge value="Threatened" size="xlarge" severity="warning"></p-badge></h4>
                     </div>
                     <div class="col-6 text-right">
-                        <button pButton type="button" label="Alert" icon="pi pi-exclamation-triangle" iconPos="left"></button>
+                        <button pButton type="button" class="p-button-danger" label="Alert" icon="pi pi-exclamation-triangle" iconPos="left"></button>
                     </div>            
                 </div>
             </p-fieldset>
@@ -19,7 +19,7 @@
 
                                 <div class="product-list-item">
                                     <div class="col-12 grid">
-                                        <div class="col-3">
+                                        <div class="lg:col-3">
                                             <img [src]="'assets/img/' + application.image" [alt]="application.image" />
                                         </div>
                                         <div class="product-list-detail col-1">
@@ -28,7 +28,7 @@
                                             <i class="pi pi-tag product-category-icon"></i><span
                                                 class="product-category">{{application.category}}</span>
                                         </div>
-                                        <div class="col-1" style="text-align:center">
+                                        <div class="lg:col-1" style="text-align:center">
                                             Today<br>
                                             <ng-container *ngIf="application.statusToday==='NOTHING' else notNothing">
                                                 <p-badge value="OK" size="xlarge" severity="success"></p-badge>
@@ -37,7 +37,7 @@
                                                 <p-badge value="X" size="xlarge" severity="danger"></p-badge>
                                             </ng-template>
                                         </div>
-                                        <div class="col-1" style="text-align:center">
+                                        <div class="lg:col-1" style="text-align:center">
                                             J-5<br>
                                             <ng-container *ngIf="application.statusJ7==='NOTHING' else notNothing">
                                                 <p-badge value="OK" size="xlarge" severity="success"></p-badge>
@@ -46,7 +46,7 @@
                                                 <p-badge value="X" size="xlarge" severity="danger"></p-badge>
                                             </ng-template>
                                         </div>
-                                        <div class="col-1" style="text-align:center">
+                                        <div class="lg:col-1" style="text-align:center">
                                             J-10<br>
                                             <ng-container *ngIf="application.statusJ15==='NOTHING' else notNothing">
                                                 <p-badge value="OK" size="xlarge" severity="success"></p-badge>

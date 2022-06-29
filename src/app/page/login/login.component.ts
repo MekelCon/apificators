@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { LoginService } from 'src/app/services/LoginService';
 
@@ -9,14 +10,23 @@ import { LoginService } from 'src/app/services/LoginService';
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private router: Router, private loginService: LoginService) { }
+  loginDialogForm: FormGroup;
+
+  constructor(private formBuilder: FormBuilder,
+              private router: Router, 
+              private loginService: LoginService) 
+    { 
+      this.loginDialogForm = this.formBuilder.group({
+        login: ['', [Validators.required]],
+      });
+    }
 
   ngOnInit(): void {
   }
 
-  handleClick(event : any): void{
-    this.loginService.connect();
-    this.router.navigate(['profile']);
+  submitLogin() {
+        let login: string = this.loginDialogForm.controls['login'].value;
+        this.loginService.connect(login);
+        this.router.navigate(['profile']);
   }
-
 }

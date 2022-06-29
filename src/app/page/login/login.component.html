@@ -1,30 +1,30 @@
 <div class="card">
-    <div class="grid">
+    <form [formGroup]="loginDialogForm">
+        <div class="grid">
 
-        <div class="col-12 text-center">
-            <p-image src="assets/img/logo.png" alt="Image" width="250px"></p-image>
-        </div>        
-        <div class="col-12 text-center">
-            <h1>BEECONNECT</h1>
-        </div>        
-        <div class="col-12 grid text-center">
-            <div class="col-6 text-right">
-                Login : 
-            </div>
-            <div class="col-6 text-left">
-                <input type="text" pInputText />
-            </div>
-            <div class="col-6 text-right">
-                Password : 
-            </div>
-            <div class="col-6 text-left">
-                <input type="password" pPassword />
+            <div class="col-12 text-center">
+                <p-image src="assets/img/logo.png" alt="Image" width="250px"></p-image>
             </div>        
-        </div>        
-        <div class="col-12 text-center">
-            <button pButton type="button" label="Bzzz" (click)="handleClick($event)"></button>
-        </div>        
-
-    </div>
-
+            <div class="col-12 text-center">
+                <h1>BEECONNECT</h1>
+            </div>        
+                <div class="col-12 grid text-center">
+                    <div class="col-6 text-right">
+                        Login : 
+                    </div>
+                    <div class="col-6 text-left">
+                        <input type="text" pInputText formControlName="login"/>
+                    </div>
+                    <div class="col-6 text-right">
+                        Password : 
+                    </div>
+                    <div class="col-6 text-left">
+                        <input type="password" pPassword/>
+                    </div>        
+                </div>        
+                <div class="col-12 text-center">
+                    <button pButton type="button" label="Bzzz" (click)="submitLogin()"></button>
+                </div>        
+        </div>
+    </form>
 </div>

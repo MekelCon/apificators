@@ -1,7 +1,7 @@
 <p-card>
 
     <div class="grid">
-        <div class="col-12 lg:col-5">
+        <div class="col-12 lg:col-4">
 
             <p-fieldset legend="Personal informations" [toggleable]="true">
                 <div class="grid">
@@ -52,11 +52,47 @@
 
         </div>
 
-        <div class="col-0 lg:col-2">
+        <div class="col-0 lg:col-4">
+            <p-fieldset *ngIf="isB2B" legend="My application" [toggleable]="true">
+                <div class="grid">
+                    <div class="col-3 lg:col-2">
+                        Name : 
+                    </div>
+                    <div class="col lg:col-2">
+                        <input type="text" pInputText value="EBOO" />
+                    </div>
+                </div>
 
+                <div class="grid">
+                    <div class="col-3 lg:col-2">
+                        Activity :
+                    </div>
+                    <div class="col lg:col-2">
+                        <input type="text" pInputText value="Finance" />
+                    </div>
+                </div>
+
+                <div class="grid">
+                    <div class="col-3 lg:col-2">
+                        Size :
+                    </div>
+                    <div class="col lg:col-2">
+                        <input type="text" pInputText value="> 1000 Customers" />
+                    </div>
+                </div>
+
+                <div class="grid">
+                    <div class="col-3 lg:col-2">
+                        County :
+                    </div>
+                    <div class="col lg:col-2">
+                        <input type="text" pInputText value="LU" />
+                    </div>
+                </div>
+            </p-fieldset>
         </div>
 
-        <div class="col-12 lg:col-5">
+        <div class="col-12 lg:col-4">
             <p-fieldset legend="Alert configuration" [toggleable]="true">
                 <div class="field-radiobutton">
                     <p-radioButton name="Email" value="Email" [(ngModel)]="city" inputId="city1"></p-radioButton>
@@ -78,6 +114,7 @@
                 </div>
             </p-fieldset>
         </div>
+
 
         <div class="col-12 lg:col-12">
             <p-fieldset legend="Application subscriptions" [toggleable]="true">

@@ -23,6 +23,7 @@ import { BadgeModule } from 'primeng/badge';
 import { DashboardComponent } from './page/dashboard/dashboard.component';
 import { SpamBeeComponent } from './page/spam-bee/spam-bee.component';
 import { LoginService } from './services/LoginService';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -43,6 +44,7 @@ import { LoginService } from './services/LoginService';
     CalendarModule,
     DropdownModule,
     FormsModule,
+    ReactiveFormsModule,
     TabMenuModule,
     ImageModule,
     ButtonModule,

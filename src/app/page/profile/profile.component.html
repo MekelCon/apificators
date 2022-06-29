@@ -1,4 +1,4 @@
-<div class="card mt-5">
+<p-card>
 
     <div class="grid">
         <div class="col-12 lg:col-5">
@@ -88,10 +88,11 @@
                             <div class="product-list-item">
                                 <img [src]="'assets/img/' + application.image" [alt]="application.image" />
                                 <div class="product-list-detail">
-                                    <div class="product-name">{{application.name}} <i class="pi pi-trash product-category-icon"></i></div>
+                                    <div class="product-name">{{application.name}} <i
+                                            class="pi pi-trash product-category-icon"></i></div>
                                     <div class="product-description">{{application.description}}</div>
                                     <div><i class="pi pi-tag product-category-icon"></i><span
-                                        class="product-category">{{application.category}}</span></div> 
+                                            class="product-category">{{application.category}}</span></div>
                                 </div>
                             </div>
                         </div>
@@ -99,6 +100,6 @@
                 </p-dataView>
             </p-fieldset>
         </div>
-
-
     </div>
+
+</p-card>

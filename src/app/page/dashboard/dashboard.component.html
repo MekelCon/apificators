@@ -1,4 +1,4 @@
-<div class="card mt-5">
+<p-card>
     <div class="grid">
         <div class="col-12">
             <p-fieldset legend="My App Status" [toggleable]="true">
@@ -10,7 +10,7 @@
                     <p-dataView #dv [value]="applications" layout="list">
                         <ng-template let-application pTemplate="listItem">
                             <div class="col-12">
-                                
+
                                 <div class="product-list-item">
                                     <div class="col-12 grid">
                                         <div class="col-3">
@@ -58,4 +58,4 @@
             </div>
         </div>
     </div>
-</div>
+</p-card>

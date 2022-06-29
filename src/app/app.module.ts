@@ -20,7 +20,8 @@ import {FieldsetModule} from 'primeng/fieldset';
 import {RadioButtonModule} from 'primeng/radiobutton';
 import { DataViewModule } from "primeng/dataview";
 import { DashboardComponent } from './page/dashboard/dashboard.component';
-
+import { SpamBeeComponent } from './page/spam-bee/spam-bee.component';
+import { LoginService } from './services/LoginService';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { DashboardComponent } from './page/dashboard/dashboard.component';
     LoginComponent,
     ProfileComponent,
     DataExplorerComponent,
-    DashboardComponent
+    DashboardComponent,
+    SpamBeeComponent
   ],
   imports: [
     BrowserModule,
@@ -47,7 +49,7 @@ import { DashboardComponent } from './page/dashboard/dashboard.component';
     RadioButtonModule,
     DataViewModule
   ],
-  providers: [],
+  providers: [LoginService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

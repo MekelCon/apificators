@@ -15,7 +15,6 @@ export class LoginComponent implements OnInit {
   }
 
   handleClick(event : any): void{
-    console.log("test" + event)
     this.loginService.connect();
     this.router.navigate(['profile']);
   }

@@ -68,6 +68,10 @@
                     <label for="city2">Push notification</label>
                 </div>
                 <div class="field-radiobutton">
+                    <p-radioButton name="SMS" value="SMS" [(ngModel)]="city" inputId="city1"></p-radioButton>
+                    <label for="city1">SMS</label>
+                </div>
+                <div class="field-radiobutton">
                     <p-radioButton name="Voice call" value="Voice call" [(ngModel)]="city" inputId="city3">
                     </p-radioButton>
                     <label for="city3">Voice call</label>
@@ -77,16 +81,17 @@
 
         <div class="col-12 lg:col-12">
             <p-fieldset legend="Application subscriptions" [toggleable]="true">
+                <div class="text-right"><button pButton type="button" label="Add"></button></div>
                 <p-dataView #dv [value]="applications" layout="list">
                     <ng-template let-application pTemplate="listItem">
                         <div class="col-3">
                             <div class="product-list-item">
                                 <img [src]="'assets/img/' + application.image" [alt]="application.image" />
                                 <div class="product-list-detail">
-                                    <div class="product-name">{{application.name}}</div>
+                                    <div class="product-name">{{application.name}} <i class="pi pi-trash product-category-icon"></i></div>
                                     <div class="product-description">{{application.description}}</div>
-                                    <i class="pi pi-tag product-category-icon"></i><span
-                                        class="product-category">{{application.category}}</span>
+                                    <div><i class="pi pi-tag product-category-icon"></i><span
+                                        class="product-category">{{application.category}}</span></div> 
                                 </div>
                             </div>
                         </div>
